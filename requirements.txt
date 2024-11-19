@@ -1,4 +1,5 @@
-pyrofork==2.3.45
+pyrotgfork
+git+https://github.com/KurimuzonAkuma/pyrogram.git
 tgcrypto 
 requests 
 bs4 
