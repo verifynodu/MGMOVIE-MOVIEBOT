@@ -498,8 +498,8 @@ async def get_shortlink(chat_id, link):
     if URL.startswith("shorturllink") or URL.startswith("terabox.in") or URL.startswith("urlshorten.in"):
         URL = SHORTLINK_URL
         API = SHORTLINK_API
-    if URL == "ModiJiUrl.com":
-        url = f'https://{URL}/easy_api'
+    if URL == "api.shareus.in":
+        url = f'https://{URL}/api'
         params = {
             "key": API,
             "link": link,
@@ -531,8 +531,8 @@ async def get_tutorial(chat_id):
 async def get_verify_shorted_link(link, url, api):
     API = api
     URL = url
-    if URL == "ModiJiUrl.com":
-        url = f'https://{URL}/easy_api'
+    if URL == "api.shareus.in":
+        url = f'https://{URL}/api'
         params = {
             "key": API,
             "link": link,
