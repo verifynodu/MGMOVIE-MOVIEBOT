@@ -61,9 +61,9 @@ if MULTIPLE_DATABASE == False:
     SEC_FILE_DB_URI = DATABASE_URI
 else:
     USER_DB_URI = DATABASE_URI # This Db is for User Data Store
-    OTHER_DB_URI = environ.get('OTHER_DB_URI', "mongodb+srv://appubosslove12345:27r4byoSAxH5m059@rukmini1.pjxcu.mongodb.net/?retryWrites=true&w=majority&appName=rukmini1") # This Db Is For Other Data Store
-    FILE_DB_URI = environ.get('FILE_DB_URI', "mongodb+srv://Krishna:T66c0FF8ZrrtmtSL@krishna.ys5wl.mongodb.net/?retryWrites=true&w=majority&appName=Krishna") # This Db Is For File Data Store
-    SEC_FILE_DB_URI = environ.get('SEC_FILE_DB_URI', "mongodb+srv://Broo:9si51bMTARsa7olW@broo.3v05r.mongodb.net/?retryWrites=true&w=majority&appName=Broo") # This Db is for File Data Store When First Db Is Going To Be Full.
+    OTHER_DB_URI = environ.get('OTHER_DB_URI', "mongodb+srv://rrr:rrr@cluster0.p2c7g.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0") # This Db Is For Other Data Store
+    FILE_DB_URI = environ.get('FILE_DB_URI', "mongodb+srv://movies:movies@cluster0.9lmf0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0") # This Db Is For File Data Store
+    SEC_FILE_DB_URI = environ.get('SEC_FILE_DB_URI', "mongodb+srv://movies1:movies1@cluster0.afzlb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0") # This Db is for File Data Store When First Db Is Going To Be Full.
     
 DATABASE_NAME = environ.get('DATABASE_NAME', "skmoviesz")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'techvjcollection')
