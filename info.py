@@ -53,7 +53,7 @@ DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in enviro
 # MongoDB information
 MULTIPLE_DATABASE = bool(environ.get('MULTIPLE_DATABASE', True)) # Set True or False
 
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://vinod974323:ohIioHMRKipvrgkL@cluster0.s36yo.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0") # IF Multiple Database Is False Then Fill Only This Database Url.
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://db1:db1@cluster0.eiz5p.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0") # IF Multiple Database Is False Then Fill Only This Database Url.
 if MULTIPLE_DATABASE == False:
     USER_DB_URI = DATABASE_URI
     OTHER_DB_URI = DATABASE_URI
@@ -61,12 +61,12 @@ if MULTIPLE_DATABASE == False:
     SEC_FILE_DB_URI = DATABASE_URI
 else:
     USER_DB_URI = DATABASE_URI # This Db is for User Data Store
-    OTHER_DB_URI = environ.get('OTHER_DB_URI', "mongodb+srv://rrr:rrr@cluster0.p2c7g.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0") # This Db Is For Other Data Store
-    FILE_DB_URI = environ.get('FILE_DB_URI', "mongodb+srv://movies:movies@cluster0.9lmf0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0") # This Db Is For File Data Store
-    SEC_FILE_DB_URI = environ.get('SEC_FILE_DB_URI', "mongodb+srv://movies1:movies1@cluster0.afzlb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0") # This Db is for File Data Store When First Db Is Going To Be Full.
+    OTHER_DB_URI = environ.get('OTHER_DB_URI', "mongodb+srv://db2:db2@cluster0.kgemv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0") # This Db Is For Other Data Store
+    FILE_DB_URI = environ.get('FILE_DB_URI', "mongodb+srv://db3:db3@cluster0.epus8.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0") # This Db Is For File Data Store
+    SEC_FILE_DB_URI = environ.get('SEC_FILE_DB_URI', "mongodb+srv://db4:db4@cluster0.ebuno.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0") # This Db is for File Data Store When First Db Is Going To Be Full.
     
 DATABASE_NAME = environ.get('DATABASE_NAME', "skmoviesz")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'techvjcollection')
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'moviescollection')
 
 # Premium And Referal Settings
 PREMIUM_AND_REFERAL_MODE = bool(environ.get('PREMIUM_AND_REFERAL_MODE', True)) # Set Ture Or False
