@@ -498,7 +498,7 @@ async def get_shortlink(chat_id, link):
     if URL.startswith("shorturllink") or URL.startswith("terabox.in") or URL.startswith("urlshorten.in"):
         URL = SHORTLINK_URL
         API = SHORTLINK_API
-    if URL == "api.shareus.in":
+    if URL == "Modijiurl.com":
         url = f'https://{URL}/api'
         params = {
             "key": API,
@@ -531,7 +531,7 @@ async def get_tutorial(chat_id):
 async def get_verify_shorted_link(link, url, api):
     API = api
     URL = url
-    if URL == "api.shareus.in":
+    if URL == "Modijiurl.com":
         url = f'https://{URL}/api'
         params = {
             "key": API,
@@ -649,7 +649,7 @@ async def send_all(bot, userid, files, ident, chat_id, user_name, query):
                                 InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
                                 InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
                             ],[
-                                InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/kingvj01")
+                                InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/SK_MOVIESZ")
                                 ]
                             ]
                         )
