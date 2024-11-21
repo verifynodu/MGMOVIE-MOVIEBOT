@@ -30,7 +30,7 @@ MELCOW_VID = environ.get("MELCOW_VID", "https://t.me/How_To_Open_Linkl")
 SPELL_IMG = environ.get("SPELL_IMG", "https://envs.sh/5TZ.jpg")
 
 # Admins, Channels & Users
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002438126233'))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002396439681'))
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6576677273 6390511215').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002438126233 -1002276833710').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '6390511215').split()]
@@ -44,7 +44,7 @@ auth_channel = environ.get('AUTH_CHANNEL', '-1002438126233') # give your force s
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 reqst_channel = environ.get('REQST_CHANNEL_ID', '')
 REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
-support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1002246055619')
+support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1002358397467')
 SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(support_chat_id) else None
 INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
 FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '-1002473123192 -1002276833710')).split()]
@@ -87,7 +87,7 @@ PUBLIC_FILE_CHANNEL = environ.get('PUBLIC_FILE_CHANNEL', '') # Public Channel Us
 GRP_LNK = environ.get('GRP_LNK', 'https://t.me/+XqR7w51awWA2MDg1')
 CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/SK_MOVIESZ')
 TUTORIAL = environ.get('TUTORIAL', 'https://t.me/How_to_download_moviez_18/41')
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'kajbajainak') # Support Chat Link Without https:// or @
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'Sk_supportgroup') # Support Chat Link Without https:// or @
 
 # True Or False
 AI_SPELL_CHECK = bool(environ.get('AI_SPELL_CHECK', True))
