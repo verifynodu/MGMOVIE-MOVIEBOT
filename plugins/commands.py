@@ -129,7 +129,8 @@ async def start(client, message):
                 parse_mode=enums.ParseMode.MARKDOWN
                 )
             return
-        except:
+        except Exception as e:
+            print(e)
             await message.reply_text("something wrong with force subscribe.")
             
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
@@ -721,6 +722,12 @@ async def delete(bot, message):
         await msg.edit('File is successfully deleted from database')
     else:
         file_name = re.sub(r"(_|\-|\.|\+)", " ", str(media.file_name))
+        unwanted_chars = ['[', ']', '(', ')']
+        for char in unwanted_chars:
+            file_name = file_name.replace(char, '')
+        file_name = ' '.join(filter(lambda x: not x.startswith('@'), file_name.split()))
+
+
         result = col.delete_many({
             'file_name': file_name,
             'file_size': media.file_size
@@ -741,7 +748,7 @@ async def delete(bot, message):
             })
             if not result.deleted_count:
                 result = sec_col.delete_many({
-                    'file_name': file_name,
+                    'file_name': media.file_name,
                     'file_size': media.file_size
                 })
             if result.deleted_count:
