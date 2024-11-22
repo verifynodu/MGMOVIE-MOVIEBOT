@@ -192,6 +192,8 @@ async def get_ststs(bot, message):
             await asyncio.sleep(10)
             await k.delete()
             await message.delete()
+        except Exception as e:
+            await rju.edit(f"Error - {e}")
     
             
 @Client.on_message(filters.command('invite') & filters.user(ADMINS))
