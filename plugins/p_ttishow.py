@@ -184,10 +184,6 @@ async def get_ststs(bot, message):
             used_dbSize3 = (stats3['dataSize']/(1024*1024))+(stats3['indexSize']/(1024*1024))
             free_dbSize3 = 512-used_dbSize3
             await rju.edit(script.STATUS_TXT.format((int(filesp)+int(totalsec)), total_users, totl_chats, filesp, round(used_dbSize, 2), round(free_dbSize, 2), totalsec, round(used_dbSize2, 2), round(free_dbSize2, 2), round(used_dbSize3, 2), round(free_dbSize3, 2)))
-            await asyncio.sleep(20)
-            await hj.delete()
-            await message.delete()
-        else:
             k = await message.reply_sticker('CAACAgIAAxkBAAJiBmc--UIMuHRmG0-rFQ_nEAeni78IAAJ5GQACFbz4SOh66d-CZm0zHgQ')        
             await asyncio.sleep(10)
             await k.delete()
