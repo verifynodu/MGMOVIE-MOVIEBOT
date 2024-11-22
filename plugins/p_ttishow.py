@@ -162,30 +162,40 @@ async def re_enable_chat(bot, message):
 
 @Client.on_message(filters.command('stats') & filters.incoming)
 async def get_ststs(bot, message):
-    rju = await message.reply('Fetching stats..')
-    try:
-        total_users = await db.total_users_count()
-        totl_chats = await db.total_chat_count()
-        filesp = col.count_documents({})
-        stats = vjdb.command('dbStats')
-        used_dbSize = (stats['dataSize']/(1024*1024))+(stats['indexSize']/(1024*1024))
-        free_dbSize = 512-used_dbSize
+    if message.from_user.id in ADMINS:  
+        rju = await message.reply('Fetching stats..')
+        try:
+            total_users = await db.total_users_count()
+            totl_chats = await db.total_chat_count()
+            filesp = col.count_documents({})
+            stats = vjdb.command('dbStats')
+            used_dbSize = (stats['dataSize']/(1024*1024))+(stats['indexSize']/(1024*1024))
+            free_dbSize = 512-used_dbSize
         
-        if MULTIPLE_DATABASE == False:
-            await rju.edit(script.SEC_STATUS_TXT.format(total_users, totl_chats, filesp, round(used_dbSize, 2), round(free_dbSize, 2)))
-            return 
+            if MULTIPLE_DATABASE == False:
+                await rju.edit(script.SEC_STATUS_TXT.format(total_users, totl_chats, filesp, round(used_dbSize, 2), round(free_dbSize, 2)))
+                return 
             
-        totalsec = sec_col.count_documents({})   
-        stats2 = sec_db.command('dbStats')
-        used_dbSize2 = (stats2['dataSize']/(1024*1024))+(stats2['indexSize']/(1024*1024))
-        free_dbSize2 = 512-used_dbSize2
-        stats3 = mydb.command('dbStats')
-        used_dbSize3 = (stats3['dataSize']/(1024*1024))+(stats3['indexSize']/(1024*1024))
-        free_dbSize3 = 512-used_dbSize3
-        await rju.edit(script.STATUS_TXT.format((int(filesp)+int(totalsec)), total_users, totl_chats, filesp, round(used_dbSize, 2), round(free_dbSize, 2), totalsec, round(used_dbSize2, 2), round(free_dbSize2, 2), round(used_dbSize3, 2), round(free_dbSize3, 2)))
-    except Exception as e:
-        await rju.edit(f"Error - {e}")
-
+            totalsec = sec_col.count_documents({})   
+            stats2 = sec_db.command('dbStats')
+            used_dbSize2 = (stats2['dataSize']/(1024*1024))+(stats2['indexSize']/(1024*1024))
+            free_dbSize2 = 512-used_dbSize2
+            stats3 = mydb.command('dbStats')
+            used_dbSize3 = (stats3['dataSize']/(1024*1024))+(stats3['indexSize']/(1024*1024))
+            free_dbSize3 = 512-used_dbSize3
+            await rju.edit(script.STATUS_TXT.format((int(filesp)+int(totalsec)), total_users, totl_chats, filesp, round(used_dbSize, 2), round(free_dbSize, 2), totalsec, round(used_dbSize2, 2), round(free_dbSize2, 2), round(used_dbSize3, 2), round(free_dbSize3, 2)))
+            await asyncio.sleep(20)
+            await hj.delete()
+            await message.delete()
+        else:
+            k = await message.reply_sticker('CAACAgIAAxkBAAJiBmc--UIMuHRmG0-rFQ_nEAeni78IAAJ5GQACFbz4SOh66d-CZm0zHgQ')        
+            await asyncio.sleep(10)
+            await k.delete()
+            await message.delete()
+        else:
+            await rju.edit(f"Error - {e}")
+    
+            
 @Client.on_message(filters.command('invite') & filters.user(ADMINS))
 async def gen_invite(bot, message):
     if len(message.command) == 1:
