@@ -20,7 +20,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'mgmovies')
 API_ID = int(environ.get('API_ID', '29919530'))
 API_HASH = environ.get('API_HASH', '09e3e8468c536526c22e5d644de244ab')
-BOT_TOKEN = environ.get('BOT_TOKEN', "")
+BOT_TOKEN = environ.get('BOT_TOKEN', "7499798065:AAG1t9Kn3z6D03RhYvm2LyOJNw0HJhRPekA")
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 1800))
