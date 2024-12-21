@@ -24,7 +24,7 @@ BOT_TOKEN = environ.get('BOT_TOKEN', "7499798065:AAG1t9Kn3z6D03RhYvm2LyOJNw0HJhR
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 1800))
-PICS = (environ.get('PICS', 'https://envs.sh/ZzS.jpg https://envs.sh/ZzW.jpg https://envs.sh/ZzB.jpg https://envs.sh/ZzI.jpg https://envs.sh/Zzn.jpg')).split() #SAMPLE PIC
+PICS = (environ.get('PICS', 'https://envs.sh/8zH.jpg')).split() #SAMPLE PIC
 NOR_IMG = environ.get("NOR_IMG", "https://envs.sh/5Tc.jpg")
 MELCOW_VID = environ.get("MELCOW_VID", "https://t.me/How_To_Open_Linkl")
 SPELL_IMG = environ.get("SPELL_IMG", "https://envs.sh/5TZ.jpg")
