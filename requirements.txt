@@ -1,5 +1,6 @@
 git+https://github.com/Sumnebaroo/pyrogram.git
 tgcrypto 
+httpx>=0.23.0
 requests 
 bs4 
 shortzy 
