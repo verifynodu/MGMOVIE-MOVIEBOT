@@ -1,10 +1,9 @@
-pyrofork==2.3.45
+git+https://github.com/Sumnebaroo/pyrogram.git
 tgcrypto 
 requests 
 bs4 
 shortzy 
 datetime 
-pytz 
 aiohttp
 yt-dlp
 youtube-dl
