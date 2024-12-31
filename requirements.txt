@@ -1,5 +1,6 @@
 git+https://github.com/Sumnebaroo/pyrogram.git
 tgcrypto 
+PIL
 requests 
 bs4 
 shortzy 
