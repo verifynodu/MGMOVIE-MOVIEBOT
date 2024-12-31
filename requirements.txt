@@ -1,4 +1,4 @@
-git+https://github.com/Sumnebaroo/pyrogram.git
+pyrofork==2.3.45
 tgcrypto 
 PIL
 requests 
