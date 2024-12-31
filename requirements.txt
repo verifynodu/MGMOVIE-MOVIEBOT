@@ -1,6 +1,5 @@
 pyrofork==2.3.45
 tgcrypto 
-PIL
 requests 
 bs4 
 shortzy 
